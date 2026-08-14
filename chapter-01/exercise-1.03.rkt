@@ -1,12 +1,12 @@
 #lang sicp
 
 (define (f a b c)
-        (cond ((and (larger-or-equal a c) (larger-or-equal b c)) (+ a b))
-              ((and (larger-or-equal a b) (larger-or-equal c b)) (+ a c))
-              ((and (larger-or-equal b a) (larger-or-equal c a)) (+ b c))))
+  (cond ((and (larger-or-equal a c) (larger-or-equal b c)) (+ a b))
+        ((and (larger-or-equal a b) (larger-or-equal c b)) (+ a c))
+        ((and (larger-or-equal b a) (larger-or-equal c a)) (+ b c))))
 
-(define (larger-or-equal a b) 
-        (or (> a b) (= a b)))
+(define (larger-or-equal a b)
+  (or (> a b) (= a b)))
 
 ; tests
 (f 1 2 3)
